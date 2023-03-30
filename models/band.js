@@ -15,31 +15,32 @@ module.exports = (sequelize, DataTypes) => {
   }
   Band.init({
     band_id: {
-        type: DataTypes.INTEGER,
-        primaryKey:true,
-        autoIncrement:true
+      type: DataTypes.INTEGER,
+      primaryKey: true,
+      autoIncrement: true
     },
-    name: { 
-        type:DataTypes.STRING,
-        allowNull:false
+    name: {
+        type: DataTypes.STRING,
+        allowNull: false
     },
     genre: {
         type: DataTypes.TEXT,
-        allowNull:false
+        allowNull: false
     },
     available_start_time: {
         type: DataTypes.DATE,
         allowNull: false
     },
-    end_time:{
+    end_time: {
         type: DataTypes.DATE,
         allowNull: false
     }
   }, {
     sequelize,
     modelName: 'Band',
-    tableName:'bands',
-    timestamps:false
-  });
+    tableName: 'bands',
+    timestamps: false
+  })
+
   return Band;
 };
